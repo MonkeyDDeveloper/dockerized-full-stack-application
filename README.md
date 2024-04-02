@@ -1,46 +1,27 @@
-Hello candidate! welcome to the development test for the position of Semi-Senior Developer for CT Funiber Ecuador. We present you with an inventory system development challenge with the requirements detailed below.
+# Product management system
+## Docker - Docker Compose
+## MongoDB - Mongoose
+## TypeScript - Expressjs - Nodejs20.x.x
+## Nuxt3 - Nuxt/ui - Tailwindcss - TypeScript
 
-#### Inventory management requirements:
+IMPORTANT
 
-1) Authentication
-	- by email and password
-	- a demo user must be provided
-	- no authorization rules must be added, the demo user has all the abilities
-	
-2) Products
-	- seed some products examples in the database
-	- add a search form with these filters 
-		- code
-		- name
-		- category
-		- has stock (boolean)
-  	- add a form to edit the main attributes such as name, code, and category
+before starting add all the necessary env variables on a .env file in the root of the project, you can copy the exact variables from the .env.example file.
 
-3) Product categorization
-	- all categories must be seeded in the database
-	- the maintenance (CRUD) for the categories are optional
-	
-4) Product measurement
-	- this features SHOULD BE handled in one single form
-	- validations are expected, the rules are at your discretion
-	
-5) Stock inquiries
-	- this features SHOULD BE handled in one single form
-	- validations are expected, the rules are at your discretion
-	
-6) Product change history
+TO RUN THE PROJECT
 
-The information must be stored in a database.
-A non-relational database can be used (optional).
-Possible technologies to use for front-end development: React, Vue, Angular, Javascript.
-The backend development language is up to you. The provided one is php8.
-The creation of the Entity Relationship Model is at the developer's discretion.
-The binding and validation of the fields is at the discretion of the developer.
-The design of the system is at the developer's discretion and creativity.
+1.- navigate to the root of the project
+2.- run -> docker compose up
+3.- default admin user
 
+admin@admin.com
+1234admin
 
-> You must send a pull request to this repository.
-> The whole project will be checked with Docker Compose, manage your dependencies well.
-> Any extra environment variables must be sent in the pull request with an explanation of how to use them.
-> If you have questions, read the requirements or contact me by email ``alfredo.hermoso@funiber.org``.
-> You have seven days to complete and submitted the project from the reception of the mail.
+Session time 4min
+
+NOTES
+As long as I'm not a web designer, the front project has the necessary stuff to make it understandable. I know the project has many things to improve, and I'm open to receiving suggestions, I can do a better job with your help. Please let me know anything.
+
+CONTACT INFORMATION
+fraydeveloper@gmail.com
++593 988433654
