@@ -1,5 +1,6 @@
-# Product management system
+# Product management system with authentication
 ## Docker - Docker Compose
+## Json Web Tokens
 ## MongoDB - Mongoose
 ## TypeScript - Expressjs - Nodejs20.x.x
 ## Nuxt3 - Nuxt/ui - Tailwindcss - TypeScript
