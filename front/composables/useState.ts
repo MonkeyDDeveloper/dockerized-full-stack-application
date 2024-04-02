@@ -1,0 +1,1 @@
+export const useSessionToken = () => useState("session-token", () => "")

@@ -1,0 +1,49 @@
+version: '3.1'
+volumes:
+  mongo-data:
+services:
+    front:
+        image: front_dev
+        container_name: front_dev_container
+        command: npm run dev -- --host
+        build:
+            context: ./front
+            dockerfile: Dockerfile.dev
+        ports:
+            - "${PORT}:${PORT}"
+        volumes:
+          - ./front:/front
+          - /front/node_modules
+        env_file:
+          - .env
+        environment:
+          PORT: ${PORT}
+        links:
+          - back_api
+        depends_on:
+          - back_api
+    monguito:
+        image: mongo
+        restart: always
+        ports:
+          - "27017:27017"
+        volumes:
+          - mongo-data:/data/db
+    back_api:
+        image: back_api_dev
+        container_name: back_api_dev_container
+        command: npm run dev
+        build:
+            context: ./back
+            dockerfile: Dockerfile.dev
+        ports:
+            - "${BACK_API_PORT}:${BACK_API_PORT}"
+        volumes:
+          - ./back:/api
+          - /api/node_modules
+        env_file:
+          - .env
+        links:
+          - monguito
+        depends_on:
+          - monguito

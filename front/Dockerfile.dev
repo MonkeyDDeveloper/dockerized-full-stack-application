@@ -1,0 +1,15 @@
+FROM node:lts-alpine3.19
+
+ENV TEST_MESSAGE="valor por defecto"
+
+WORKDIR /front
+COPY ./package*.json /front/
+
+RUN npm install
+
+COPY . .
+
+#expose the ports
+# EXPOSE 3000
+
+# CMD ["npm", "run", "dev", "--", "--host"]
