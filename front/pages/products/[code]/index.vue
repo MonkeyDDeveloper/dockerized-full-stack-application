@@ -45,7 +45,7 @@ onMounted(async () => {
         productCode,
       {
         headers: {
-          authorization: sessionToken.value,
+          authorization: String(sessionToken.value),
         },
       }
     );
@@ -89,7 +89,7 @@ onMounted(async () => {
       "http://localhost:" + BACK_API_PORT + "/products/categories",
       {
         headers: {
-          authorization: sessionToken.value,
+          authorization: String(sessionToken.value),
         },
       }
     );
@@ -125,7 +125,7 @@ async function deleteProduct() {
       {
         method: "delete",
         headers: {
-          authorization: sessionToken.value,
+          authorization: String(sessionToken.value),
         },
       }
     );
@@ -162,7 +162,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         method: "put",
         headers: {
           "content-type": "application/json",
-          authorization: sessionToken.value,
+          authorization: String(sessionToken.value),
         },
         body: JSON.stringify({
           ...event.data,

@@ -61,7 +61,7 @@
                 method: 'get',
                 headers: {
                     'Content-type': 'application/json',
-                    'Authorization': `${sessionToken.value}`
+                    'authorization': String(sessionToken.value),
                 }
             })
     
