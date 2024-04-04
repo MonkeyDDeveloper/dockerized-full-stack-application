@@ -10,7 +10,7 @@
     const sessionToken = useCookie("sessionToken")
     const runtimeConfig = useRuntimeConfig();
     const categories = ref()
-    const { BACK_API_PORT } = runtimeConfig.public
+    const { BACK_API_PORT = 5600 } = runtimeConfig.public
 
     const schema = z.object({
         name: z.string(),

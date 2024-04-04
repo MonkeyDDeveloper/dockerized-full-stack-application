@@ -13,7 +13,7 @@
     const runtimeConfig = useRuntimeConfig();
     const seeChangesModal = ref(false);
     const productChanges: Ref<IAudit[]> = ref([])
-    const { BACK_API_PORT } = runtimeConfig.public;
+    const { BACK_API_PORT = 5600 } = runtimeConfig.public;
 
     type changeRow = {code: number, name: string, updatedAt: string, changeId: string}
 

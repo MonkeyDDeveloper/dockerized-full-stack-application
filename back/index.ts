@@ -11,9 +11,9 @@ import { ProductRouter, AuthRouter } from "./routers"
 
 const app = express()
 const dbUri = "mongodb://monguito:27017/store"
-const port = process.env.BACK_API_PORT || 5500
-const passwordTokenKey = process.env.PASSWORD_TOKEN_KEY || "password_secret"
-const sessionTokenKey = process.env.SESSION_TOKEN_KEY || "session_secret"
+const port = process.env.BACK_API_PORT || 5600
+const passwordTokenKey = process.env.PASSWORD_TOKEN_KEY || "secret1"
+const sessionTokenKey = process.env.SESSION_TOKEN_KEY || "secret2"
 
 console.log({dbUri, passwordTokenKey, sessionTokenKey})
 

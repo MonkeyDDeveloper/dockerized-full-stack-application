@@ -38,7 +38,7 @@
     import type { FormSubmitEvent} from "#ui/types"
 
     const runtimeConfig = useRuntimeConfig();
-    const { BACK_API_PORT } = runtimeConfig.public
+    const { BACK_API_PORT = 5600 } = runtimeConfig.public
 
     console.log({BACK_API_PORT})
 

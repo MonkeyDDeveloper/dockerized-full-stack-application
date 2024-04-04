@@ -15,7 +15,7 @@ const openPopover = ref(false);
 const openEditPopover = ref(false);
 const categories = ref([]);
 const runtimeConfig = useRuntimeConfig();
-const { BACK_API_PORT } = runtimeConfig.public;
+const { BACK_API_PORT = 5600 } = runtimeConfig.public;
 
 const schema = z.object({
   name: z.string().min(1, "Enter a name for the product"),
